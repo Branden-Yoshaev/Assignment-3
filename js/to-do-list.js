@@ -16,7 +16,7 @@
      listItem.appendChild(listText);
      listText.textContent = myItem;
   
-     //Event Handler removes to-do list item  with the delete button
+     //Removes to-do list item with the delete button
      listBtn.onclick = function() {
          list.removeChild(listItem);
      }
@@ -25,8 +25,15 @@
      listBtn.textContent = 'Delete';
      list.appendChild(listItem);
 
-     //Check box in the list
-    
+     //Check box in the list in event Listener
+     const checkBox = document.querySelector('checkBox');
+     checkBox.addEventListener('change', (event) => {
+        const result = document.querySelector('result');
+        result.textContent = `To do ${event.target.value}`;
+      });
+
+      listItem.appendChild(checkBox);
+
      //To input element
      input.focus();
      }
