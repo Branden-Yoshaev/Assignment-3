@@ -35,6 +35,16 @@
     listItem.appendChild(submit);
     list.appendChild(submit);
 
+    //When submit button pressed alert output
+    var mySubmit = document.createElement("input");
+    function mySubmit() {
+        document.getElementById("mySubmit").innerHTML = "Do everything that is checked.";
+      }
+
+    //   function mySubmit() {
+    //     alert("Do everything that is checked!");
+    //   }
+    
     //To input element
          input.focus();
         }
